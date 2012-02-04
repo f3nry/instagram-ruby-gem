@@ -63,11 +63,6 @@ module Instagram
       base.reset
     end
 
-    # Convenience method to allow configuration options to be set in a block
-    def configure
-      yield self
-    end
-
     # Create a hash of options and their values
     def options
       VALID_OPTIONS_KEYS.inject({}) do |option, key|

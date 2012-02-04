@@ -13,6 +13,10 @@ module Instagram
     Instagram::Client.new(options)
   end
 
+  def self.configure
+		yield self
+	end
+
   # Delegate to Instagram::Client
   def self.method_missing(method, *args, &block)
     return super unless client.respond_to?(method)

@@ -10,7 +10,7 @@ module Instagram
 
     # Creates a new API
     def initialize(options={})
-      options = Instagram.options.merge(options)
+      options = Instagram.options
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
       end
